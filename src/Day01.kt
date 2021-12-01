@@ -1,15 +1,31 @@
 fun main() {
+
+    fun List<Int>.increaseCount() = foldIndexed(0) { index, acc, current ->
+        val previousValue = getOrNull(index - 1)
+        if (previousValue != null && previousValue < current) {
+            acc + 1
+        } else {
+            acc
+        }
+    }
+
+    fun List<Int>.sumByThree() = mapIndexedNotNull { index, value ->
+        if (getOrNull(index + 2) != null) {
+            value + this[index + 1] + this[index + 2]
+        } else {
+            null
+        }
+    }
+
     fun part1(input: List<String>): Int {
-        return input.size
+        return input.map { it.toInt() }.increaseCount()
     }
 
     fun part2(input: List<String>): Int {
-        return input.size
+        return input.map { it.toInt() }
+            .sumByThree()
+            .increaseCount()
     }
-
-    // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day01_test")
-    check(part1(testInput) == 1)
 
     val input = readInput("Day01")
     println(part1(input))

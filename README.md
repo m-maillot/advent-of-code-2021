@@ -10,7 +10,6 @@ If you stuck with Kotlin-specific questions or anything related to this template
 - [Kotlin Slack][slack]
 - Template [issue tracker][issues]
 
-
 [^aoc]:
     [Advent of Code][aoc] – an annual event in December since 2015.
     Every year since then, with the first day of December, a programming puzzles contest is published every day for twenty-four days.
@@ -23,3 +22,9 @@ If you stuck with Kotlin-specific questions or anything related to this template
 [kotlin]: https://kotlinlang.org
 [slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
 [template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
+
+# Run 
+
+As mentioned on [twitter](https://twitter.com/ericwastl/status/1465805354214830081), I don't push the inputs. 
+If you want to run this code, you need to create a file `DayXX.txt` in the `src/input` folder. 
+For the Day 1, create a `src/input/Day01.txt` file with the input provided in your case. 
